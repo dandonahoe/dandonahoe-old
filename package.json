@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "open": "^10.1.0"
+    "open": "^10.1.0",
+    "semantic-release": "^24.0.0"
   }
 }
