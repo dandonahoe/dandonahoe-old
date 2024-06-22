@@ -1,0 +1,15 @@
+{
+  "name": "dandonahoe.github.io",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "## Setup",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "open": "^10.1.0"
+  }
+}
