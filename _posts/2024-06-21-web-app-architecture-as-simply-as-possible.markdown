@@ -65,7 +65,7 @@ Deploying your application and ensuring it runs smoothly in production is just a
 
 Understanding how these components interact is key to mastering web development. Here's a high-level overview of the architecture:
 
-```mermaid
+<div class="mermaid">
 graph TD;
     User -->|HTTP Request| Frontend[Frontend - React/NextJS]
     Frontend -->|API Call| Backend[Backend - Node.js/Express.js]
@@ -73,7 +73,7 @@ graph TD;
     Database -->|Data| Backend
     Backend -->|API Response| Frontend
     Frontend -->|HTTP Response| User
-```
+<div>
 
 ## Let's Get Started
 
