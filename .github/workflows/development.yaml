@@ -37,8 +37,8 @@ jobs:
         environment: Development
 
         # Environment variables, with secrets injected
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        # env:
+        #   GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
         strategy:
             matrix:

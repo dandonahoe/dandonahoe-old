@@ -26,7 +26,7 @@ exec('bundle -v', async (error, stdout, stderr) => {
     const { default: open } = await import('open');
 
     // Run Jekyll serve command
-    const jekyllProcess = exec('bundle exec jekyll serve');
+    const jekyllProcess = exec('jekyll serve --livereload');
 
     // Output Jekyll logs to console
     jekyllProcess.stdout.on('data', (data) => {
