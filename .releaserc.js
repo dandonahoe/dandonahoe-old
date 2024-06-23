@@ -35,13 +35,10 @@ export default {
             npmPublish: false
         }],
 
-        ["@semantic-release/git", {
+        ["@semantic-release/github", {
             assets: [
-                "CHANGELOG.md",
-                "package.json",
-                "package-lock.json"
-            ],
-            message: "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+                { path: "_posts/**/*", label: "Posts" },
+            ]
         }]
     ]
 };
