@@ -16,13 +16,21 @@ graph TD;
     C-->D;
 ```  
 
+<div class="mermaid">
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+</div>
+
 # Welcome to Your Ultimate Web Development Guide
 
 Welcome to our blog, the ultimate resource for web developers aiming to create and maintain production-grade web applications. Whether you're just starting or looking to enhance your skills, this guide will take you through a comprehensive journey from the basics to advanced concepts.
 
 ## Why This Guide?
 
-In the rapidly evolving field of web development, staying up-to-date with the latest technologies and best practices is crucial. This blog is designed to be a linear guide, providing a clear path from start to finish in building a professional web application. Here’s what you can expect:
+In the rapidly evolving field of web development, staying up-to-date with the latest technologies and best practices is crucial. This blog is designed to be a linear guide, providing a clear path from start to finish in building a professional web application. Here's what you can expect:
 
 - **Step-by-Step Tutorials**: Detailed instructions for every stage of development.
 - **Code Examples**: Practical examples to help you understand and implement concepts.
@@ -31,7 +39,7 @@ In the rapidly evolving field of web development, staying up-to-date with the la
 
 ## What You'll Learn
 
-Our guide covers a wide range of topics, structured to give you a solid foundation and progressively build your expertise. Here’s a sneak peek into what we'll cover:
+Our guide covers a wide range of topics, structured to give you a solid foundation and progressively build your expertise. Here's a sneak peek into what we'll cover:
 
 ### Technologies We'll Use
 
@@ -47,7 +55,7 @@ The frontend is the face of your application, the part users interact with. We'l
 
 ### Backend Development
 
-The backend is the brain of your application, handling logic, database interactions, and more. We’ll cover Node.js, Express.js, and .NET Core, providing you with the tools to build robust server-side applications.
+The backend is the brain of your application, handling logic, database interactions, and more. We'll cover Node.js, Express.js, and .NET Core, providing you with the tools to build robust server-side applications.
 
 ### DevOps and Deployment
 
@@ -69,7 +77,7 @@ graph TD;
 
 ## Let's Get Started
 
-In the next post, we'll start with the basics of web development. If you’re ready to embark on this journey, click on the link below to get started with our first tutorial on setting up your development environment.
+In the next post, we'll start with the basics of web development. If you're ready to embark on this journey, click on the link below to get started with our first tutorial on setting up your development environment.
 
 ## Start with the Basics
 
