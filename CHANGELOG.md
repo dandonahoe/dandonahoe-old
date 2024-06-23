@@ -1,3 +1,12 @@
+# [1.1.0-dev.1](https://github.com/dandonahoe/dandonahoe.github.io/compare/v1.0.0...v1.1.0-dev.1) (2024-06-23)
+
+
+### Features
+
+* **versioning:** added dev pipeline ([1a13445](https://github.com/dandonahoe/dandonahoe.github.io/commit/1a13445c629bf6081767759435b30e285bc974f0))
+* **versioning:** conflict ([acd8ed7](https://github.com/dandonahoe/dandonahoe.github.io/commit/acd8ed7d3ed265fa461e30a35e8f6eed6d3ad636))
+* **npm:** reinstalled npm ([0c9d555](https://github.com/dandonahoe/dandonahoe.github.io/commit/0c9d55556aa27fd13946f43b48ddc76142fd6411))
+
 # [1.0.0-dev.2](https://github.com/dandonahoe/dandonahoe.github.io/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2024-06-23)
 
 ### Features
