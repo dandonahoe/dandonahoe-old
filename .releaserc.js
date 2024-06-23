@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     repositoryUrl: "https://github.com/dandonahoe/dandonahoe.github.io",
     branches: [
         { name: "1.x", range: "1.x", channel: "1.x" },
