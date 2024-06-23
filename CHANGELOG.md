@@ -1,17 +1,14 @@
 # [1.0.0-dev.2](https://github.com/dandonahoe/dandonahoe.github.io/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2024-06-23)
 
-
 ### Features
 
 * **npm:** reinstalled npm ([0c9d555](https://github.com/dandonahoe/dandonahoe.github.io/commit/0c9d55556aa27fd13946f43b48ddc76142fd6411))
 
 # 1.0.0-dev.1 (2024-06-23)
 
-
 ### Bug Fixes
 
 * **versioning:** js version update ([239c19e](https://github.com/dandonahoe/dandonahoe.github.io/commit/239c19e6a7e6bb6ef4b56200fda6e297ea50ae20))
-
 
 ### Features
 
