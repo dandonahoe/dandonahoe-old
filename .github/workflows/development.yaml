@@ -1,0 +1,79 @@
+#
+# Pipeline - Development
+#
+# This GitHub Actions workflow is designed to automate the CI/CD pipeline for a development environment.
+# It triggers on push events to the main branch and performs the following steps:
+# - Checks out the repository
+# - Sets up the Node.js environment
+# - Caches npm dependencies to speed up subsequent runs
+# - Generates and configures environment variables
+# - Disables Next.js telemetry
+# - Installs npm dependencies
+# - Runs various npm scripts for semantic release, database validation, build, linting, database deployment, database generation, and testing
+#
+# Environment variables and secrets are injected securely using GitHub Secrets.
+# The workflow is configured to run on the latest Ubuntu runner.
+#
+# For more details on each step, refer to the inline comments below.
+
+
+name: Pipeline - Development
+# Trigger the workflow on push events to the main branch
+on:
+    push:
+        branches: [dev]
+
+jobs:
+    build:
+        # Specify the runner to use for this job
+        runs-on: ubuntu-latest
+        # runs-on: [self-hosted, macOS, ARM64]  # Specifies the labels of the self-hosted runner
+
+        # Permissions required for this job
+        permissions:
+            contents: write  # Allows the job to write back to the repository, necessary for actions like pushing commits or tags
+
+        # Specify the environment this job is running in
+        environment: Development
+
+        # Environment variables, with secrets injected
+        # env:
+        #     DATABASE_CI_CONNECTION_STRING: ${{ secrets.DATABASE_CI_CONNECTION_STRING }}
+        #     STRIPE_LOCAL_WEBHOOK_SECRET:   ${{ secrets.STRIPE_LOCAL_WEBHOOK_SECRET   }}
+
+        strategy:
+            matrix:
+                node-version: [20.x]  # Define a matrix to run the job with different versions of Node.js
+
+        steps:
+            # Cache npm dependencies
+            - uses: actions/cache@v3
+              with:
+                  path: |
+                      ~/.npm
+                      **/node_modules
+
+                  # Generate a new cache whenever packages or source files change.
+                  key: ${{ runner.os }}-blog-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.[jt]s', '**/*.[jt]sx') }}
+
+                  # If source files changed but packages didn't, rebuild from a prior cache.
+                  restore-keys: |
+                      ${{ runner.os }}-blog-${{ hashFiles('**/package-lock.json') }}-
+
+            # Checkout the repository
+            - uses: actions/checkout@v3
+
+            # Setup Node.js environment
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+
+            # Verify Node.js version
+            - run: node -v
+
+            # Write Environment Variabled to a loval .env
+            # - run: echo "CYPRESS_RECORD_KEY=$CYPRESS_RECORD_KEY" >> .env
+
+            - run: npm ci
+            - run: npm run ci-semantic-release
