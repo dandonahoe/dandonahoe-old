@@ -37,9 +37,8 @@ jobs:
         environment: Development
 
         # Environment variables, with secrets injected
-        # env:
-        #     DATABASE_CI_CONNECTION_STRING: ${{ secrets.DATABASE_CI_CONNECTION_STRING }}
-        #     STRIPE_LOCAL_WEBHOOK_SECRET:   ${{ secrets.STRIPE_LOCAL_WEBHOOK_SECRET   }}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
         strategy:
             matrix:
