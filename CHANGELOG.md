@@ -1,3 +1,10 @@
+# [1.1.0-dev.3](https://github.com/dandonahoe/dandonahoe.github.io/compare/v1.1.0-dev.2...v1.1.0-dev.3) (2024-06-23)
+
+
+### Features
+
+* **pr:** added pr template test ([ad149b3](https://github.com/dandonahoe/dandonahoe.github.io/commit/ad149b38c97f4a863f4a86294cff3221c5e08421))
+
 # [1.1.0-dev.2](https://github.com/dandonahoe/dandonahoe.github.io/compare/v1.1.0-dev.1...v1.1.0-dev.2) (2024-06-23)
 
 
